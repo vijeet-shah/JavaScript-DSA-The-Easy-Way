@@ -16,8 +16,7 @@ class Solution {
   const totalCount = obj.uniquePaths(2, 3);
   console.log("The total number of Unique Paths are " + totalCount);
   
-//The time complexity of this algorithm is 
-//O(min(m, n)) since it depends on the smaller value between m and n.
+//The time complexity of this algorithm is O(min(m, n)) since it depends on the smaller value between m and n.
 
 
 
