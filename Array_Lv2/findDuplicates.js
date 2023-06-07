@@ -1,22 +1,29 @@
 function findDuplicate(nums) {
-    let slow = nums[0];
-    let fast = nums[0];
-  
-    do {
-      slow = nums[slow];
-      fast = nums[nums[fast]];
-    } while (slow !== fast);
-  
-    fast = nums[0];
-  
-    while (slow !== fast) {
-      slow = nums[slow];
-      fast = nums[fast];
-    }
-  
-    return slow;
+  // Initialize slow and fast pointers.
+  let slow = nums[0];
+  let fast = nums[0];
+
+  // Iterate until the two pointers meet.
+  do {
+    // Move slow pointer one step at a time.
+    slow = nums[slow];
+
+    // Move fast pointer two steps at a time.
+    fast = nums[nums[fast]];
+  } while (slow !== fast);
+
+  // Set fast pointer to the beginning of the list.
+  fast = nums[0];
+
+  // Iterate until the two pointers point to the same element.
+  while (slow !== fast) {
+    // Move slow pointer one step at a time.
+    slow = nums[slow];
+
+    // Move fast pointer one step at a time.
+    fast = nums[fast];
   }
-  
-  const arr = [1, 3, 4, 2, 3];
-  console.log("The duplicate element is " + findDuplicate(arr));
-  
+
+  // Return the duplicate element.
+  return slow;
+}
