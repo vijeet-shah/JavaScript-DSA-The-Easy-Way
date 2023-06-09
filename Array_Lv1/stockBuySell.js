@@ -4,18 +4,36 @@ You want to maximize your profit by choosing a single day to buy one stock and c
 
 
 function maxProfit(arr) {
-    let maxPro = 0;
-    let n = arr.length;
-    let minPrice = Infinity;
-  
-    for (let i = 0; i < arr.length; i++) {
-      minPrice = Math.min(minPrice, arr[i]);
-      maxPro = Math.max(maxPro, arr[i] - minPrice);
-    }
-  
-    return maxPro;
+  // This function finds the maximum profit that can be made by buying and selling stocks.
+
+  // Initialize the maximum profit to 0.
+  let maxPro = 0;
+
+  // Initialize the number of stocks to the length of the array.
+  let n = arr.length;
+
+  // Initialize the minimum price to infinity.
+  let minPrice = Infinity;
+
+  // Iterate over the stock prices.
+  for (let i = 0; i < n; i++) {
+
+    // Update the minimum price to the minimum of the current price and the minimum price so far.
+    minPrice = Math.min(minPrice, arr[i]);
+
+    // Update the maximum profit to the maximum of the current profit and the maximum profit so far.
+    maxPro = Math.max(maxPro, arr[i] - minPrice);
   }
-  
-  const arr = [7, 1, 5, 3, 6, 4];
-  const maxPro = maxProfit(arr);
-  console.log("Max profit is:", maxPro);
+
+  // Return the maximum profit.
+  return maxPro;
+}
+
+// Create a list of stock prices.
+const arr = [7, 1, 5, 3, 6, 4];
+
+// Find the maximum profit.
+const maxPro = maxProfit(arr);
+
+// Print the maximum profit.
+console.log("Max profit is:", maxPro);
