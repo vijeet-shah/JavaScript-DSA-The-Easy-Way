@@ -11,31 +11,34 @@ function swapIfGreater(arr1, arr2, ind1, ind2) {
     // Initial gap
     let gap = Math.ceil(len / 2);
   
-    while (gap > 0) {
-      // Place 2 pointers
-      let left = 0;
-      let right = left + gap;
-      while (right < len) {
-        // Case 1: left in arr1[] and right in arr2[]
-        if (left < n && right >= n) {
-          swapIfGreater(arr1, arr2, left, right - n);
-        } 
-        // Case 2: both pointers in arr2[]
-        else if (left >= n) {
-          swapIfGreater(arr2, arr2, left - n, right - n);
-        }
-        // Case 3: both pointers in arr1[]
-        else {
-          swapIfGreater(arr1, arr1, left, right);
-        }
-        left++;
-        right++;
-      }
-      // Break if iteration gap=1 is completed
-      if (gap === 1) break;
-  
-      // Otherwise, calculate new gap
-      gap = Math.ceil(gap / 2);
+    // Iterate while the right pointer is less than the length of the merged array.
+while (right < len) {
+  // Case 1: left in arr1[] and right in arr2[]
+  if (left < n && right >= n) {
+    // Swap the values at the two pointers, if the value at arr1[ind1] is greater than the value at arr2[ind2].
+    swapIfGreater(arr1, arr2, left, right - n);
+  } 
+  // Case 2: both pointers in arr2[]
+  else if (left >= n) {
+    // Swap the values at the two pointers.
+    swapIfGreater(arr2, arr2, left - n, right - n);
+  }
+  // Case 3: both pointers in arr1[]
+  else {
+    // Swap the values at the two pointers.
+    swapIfGreater(arr1, arr1, left, right);
+  }
+
+  // Increment both pointers.
+  left++;
+  right++;
+}
+
+// Break if iteration gap=1 is completed.
+if (gap === 1) break;
+
+// Otherwise, calculate new gap.
+gap = Math.ceil(gap / 2);
     }
   }
   
