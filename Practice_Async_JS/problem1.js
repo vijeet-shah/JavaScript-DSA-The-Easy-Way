@@ -11,3 +11,4 @@ higherOrder(callAboveFun);
 
 // What is Callback fuction?
 // Whats the difference between normal fuction & Callback function?
+// Whats the difference between Higher order fuction & Callback function?
