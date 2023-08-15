@@ -28,8 +28,6 @@ Each of these applications demonstrates how trees are a versatile and powerful d
 **Tree Terminology :**
 **1. Node:** Each element in a tree is represented by a node. A node contains data and a reference to its child nodes.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1025dee-18ae-486f-bebd-9e85b7de0cb2/Untitled.png)
-
 **2. Parent Node:** A parent node is a node that has child nodes originating from it.
 
 **3. Child Node:** A child node is a node that is linked to a parent node.
@@ -59,9 +57,6 @@ Each of these applications demonstrates how trees are a versatile and powerful d
 Now, let's see these concepts in action with an example:
 
 Consider a tree representing an organizational structure:
-
-```objectivec
-objectivecCopy code
           CEO
         /   |   \
     CTO   CFO   CMO
