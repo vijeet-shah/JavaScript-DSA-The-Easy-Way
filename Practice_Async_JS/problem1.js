@@ -1,3 +1,5 @@
+//Write a function 'higherOrder' that takes a callback function as an argument. Inside 'higherOrder', call the callback function synchronously.
+
 const higherOrder = (callback) => {
   console.log("Task completed"); // Call the callback function
   callback();
