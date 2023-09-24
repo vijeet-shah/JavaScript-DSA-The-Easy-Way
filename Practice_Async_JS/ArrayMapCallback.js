@@ -17,3 +17,19 @@ let modifyValue = (value) => {
 let x = [1, 2, 3, 4, 5, 6];
 let modifiedArray = mapArray(x, modifyValue);
 console.log(modifiedArray);
+
+
+// let mapArray = (x, callback) => {
+//   let arr = x.map((e) => {
+//     return callback(e);
+//   });
+//   return arr;
+// };
+
+// let callback = (x) => {
+//   return x * x;
+// };
+
+// let callback2 = (x) => {
+//   return x * 2;
+// };
